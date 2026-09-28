@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="india.css" />
+  <link rel="stylesheet" href="portal.css" />
 </head>
 <body>
   <header class="nav">
     <a class="brand" href="#top" aria-label="Stratwell home"><span class="brand-mark">S</span><span>STRATWELL<small>HEALTH TALENT</small></span></a>
     <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav aria-label="Main navigation"><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#roles">Specialisms</a><a href="#jobs">Find jobs</a><a class="nav-cta" href="#contact">Talk to us</a></nav>
+    <nav aria-label="Main navigation"><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#roles">Specialisms</a><a href="#jobs">Find jobs</a><button class="portal-link" data-open-login>Portal sign in</button><a class="nav-cta" href="#contact">Talk to us</a></nav>
   </header>
 
   <main id="top">
@@ -24,7 +25,7 @@
         <p class="eyebrow">Healthcare recruitment & workforce solutions</p>
         <h1>People who make<br><em>care</em> possible.</h1>
         <p class="intro">The human-first recruitment partner for ambitious healthcare organisations and exceptional people across India.</p>
-        <div class="actions"><a class="button light" href="#contact">Hire with us <span>→</span></a><a class="button text" href="#jobs">Explore opportunities <span>↗</span></a></div>
+        <div class="actions"><a class="button light" href="#contact">Hire with us <span>→</span></a><button class="button text" data-open-login>Explore the portal <span>↗</span></button></div>
         <div class="trust"><span><b>India-wide</b> healthcare reach</span><span><b>94%</b> client retention</span><span><b>24h</b> rapid response</span></div>
       </div>
       <div class="hero-art" aria-label="Healthcare professional in a hospital setting">
@@ -52,9 +53,12 @@
 
     <section class="jobs" id="jobs"><div class="section-head"><div><p class="eyebrow teal">Latest opportunities in India</p><h2>Work worth<br>waking up for.</h2></div><a class="button dark" href="#contact">View all roles <span>→</span></a></div><div class="job-list"><a href="#contact"><span class="job-type">Permanent</span><h3>Clinical Governance Lead</h3><p>Bengaluru · Hybrid · ₹18–24 LPA</p><span>→</span></a><a href="#contact"><span class="job-type">Permanent</span><h3>Senior Physiotherapist</h3><p>New Delhi · ₹7–10 LPA</p><span>→</span></a><a href="#contact"><span class="job-type">Contract</span><h3>Head of Nursing</h3><p>Mumbai · 6 months</p><span>→</span></a></div></section>
 
+    <section class="platform-intro" id="platform"><div><p class="eyebrow teal">One connected platform</p><h2>Every hiring conversation, in one place.</h2><p>Stratwell Connect brings candidates, clients and our recruitment team together without losing the human touch.</p></div><div class="portal-cards"><button data-demo-role="candidate"><span>01</span><strong>Candidate portal</strong><small>Profile, applications & interviews</small></button><button data-demo-role="client"><span>02</span><strong>Client portal</strong><small>Vacancies, shortlists & feedback</small></button><button data-demo-role="recruiter"><span>03</span><strong>Recruiter workspace</strong><small>Pipeline, matching & coordination</small></button><button data-demo-role="admin"><span>04</span><strong>Admin control centre</strong><small>Performance, access & governance</small></button></div></section>
     <section class="contact" id="contact"><div><p class="eyebrow">Let’s start a conversation</p><h2>Where could<br>we take you?</h2><p>Whether you are building a team or thinking about what comes next, we would love to hear from you.</p><div class="contact-details"><a href="mailto:diptabiswas00@gmail.com">diptabiswas00@gmail.com</a><a href="tel:+917065781441">+91 70657 81441</a></div></div><form id="contact-form"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input type="email" name="email" required placeholder="you@organisation.com"></label><label>I’m interested in<select name="interest"><option>Hiring great people</option><option>Finding my next role</option><option>Something else</option></select></label><button class="button light" type="submit">Send enquiry <span>→</span></button><p class="form-message" aria-live="polite"></p></form></section>
   </main>
-  <footer><a class="brand" href="#top"><span class="brand-mark">S</span><span>STRATWELL<small>HEALTH TALENT</small></span></a><p>Healthcare recruitment, done with care.</p><p>© <span id="year"></span> Stratwell Health Talent. Concept website.</p></footer>
+  <footer><a class="brand" href="#top"><span class="brand-mark">S</span><span>STRATWELL<small>HEALTH TALENT</small></span></a><p>Healthcare recruitment, done with care.</p><button class="footer-demo" data-open-login>Open presentation demo</button><p>© <span id="year"></span> Stratwell Health Talent. Concept website.</p></footer>
+  <div class="modal" id="login-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><p class="eyebrow teal">Presentation environment</p><h2 id="login-title">Welcome to Stratwell Connect</h2><p>Select a role to see the working day-one experience. No real information is stored in this demo.</p><div class="login-grid"><button data-demo-role="candidate"><b>Candidate</b><small>priya@demo.in</small></button><button data-demo-role="client"><b>Client</b><small>arjun@demo.in</small></button><button data-demo-role="recruiter"><b>Recruiter</b><small>meera@demo.in</small></button><button data-demo-role="admin"><b>Super admin</b><small>admin@demo.in</small></button></div><p class="demo-note">Demo password for every account: <strong>Stratwell2026!</strong></p></div></div>
+  <section class="portal-shell" id="portal-shell" aria-live="polite"></section>
   <script src="script.js"></script>
 </body>
 </html>
