@@ -1,0 +1,48 @@
+.insights-page .nav nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--sea)}
+.insights-hero{padding:160px 10% 88px;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.insights-hero:after{content:"";position:absolute;width:310px;height:310px;border:1px solid #86bdb259;border-radius:50%;right:-120px;bottom:-140px;pointer-events:none}
+.insights-hero h1{max-width:980px;font:clamp(46px,6.3vw,84px)/1.05 Georgia,serif;letter-spacing:-.045em;margin:0}
+.editorial-dot{color:var(--coral)}
+.insights-hero .intro{max-width:650px;margin:27px 0 30px;color:#e1ede7;font-size:19px;line-height:1.65}
+.insights-hero-link{display:inline-flex;align-items:center;gap:24px;border-bottom:1px solid #86bdb2;padding:10px 0;min-height:44px;font-weight:700;color:#fff}
+.insights-hero-link:hover{color:#b6e0d5;border-color:#b6e0d5}
+.founder-note{padding:66px 10%;display:grid;grid-template-columns:1fr 1.1fr;gap:55px;background:var(--cream);border-bottom:1px solid #d6ddd3;align-items:center}
+.founder-note-identity{display:flex;gap:24px;align-items:center}
+.desk-monogram{display:grid;place-items:center;width:105px;height:125px;flex-shrink:0;border-radius:54px 54px 3px 3px;background:#dce8df;border-bottom:4px solid var(--coral);font:43px Georgia,serif;color:var(--ink)}
+.founder-note .eyebrow{margin-bottom:13px}
+.founder-note h2{font:31px/1.2 Georgia,serif;letter-spacing:-.02em;margin:0 0 12px}
+.founder-note-identity p:last-child{max-width:240px;font-size:12px;line-height:1.7;color:#42615d;margin-bottom:0}
+.founder-note-copy{max-width:620px}
+.founder-note-copy p{font-size:15px;line-height:1.8;color:#3f5d59;margin-bottom:14px}
+.founder-note-copy .arrow-link{font-size:13px;min-height:44px;margin-top:3px}
+.insight-library{display:grid;grid-template-columns:225px minmax(0,760px);gap:70px;padding:78px 10% 35px;max-width:1450px;margin:0 auto;scroll-margin-top:25px}
+.insight-contents{align-self:start;position:sticky;top:35px;padding-top:9px}
+.insight-contents nav{display:grid;border-top:1px solid #c5d1cd}
+.insight-contents nav a{display:flex;align-items:start;gap:12px;padding:17px 0;border-bottom:1px solid #c5d1cd;font-size:13px;line-height:1.6;transition:color .2s}
+.insight-contents nav a span{font-size:11px;color:var(--teal);font-weight:700;margin-top:1px}
+.insight-contents nav a:hover{color:var(--teal);text-decoration:underline;text-underline-offset:4px}
+.contents-note{font:16px/1.6 Georgia,serif;color:#4c6663;margin-top:26px;max-width:205px}
+.insight-essays{min-width:0}
+.insight-essay{padding:0 0 52px;margin-bottom:55px;border-bottom:1px solid #c5d1cd;scroll-margin-top:30px}
+.essay-kicker{display:flex;gap:14px;align-items:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--teal);margin-bottom:24px}
+.essay-kicker span{font:25px Georgia,serif;color:#a34a35;letter-spacing:0}
+.insight-essay h2{font:clamp(30px,3.5vw,48px)/1.1 Georgia,serif;letter-spacing:-.025em;margin-bottom:27px;max-width:730px;overflow-wrap:break-word}
+.insight-essay p:not(.essay-kicker){font-size:16px;line-height:1.9;color:#365751;margin-bottom:22px;max-width:70ch}
+.insight-essay .essay-lead{font:23px/1.55 Georgia,serif!important;color:var(--ink)!important;margin-bottom:29px!important}
+.essay-back{display:inline-flex;align-items:center;gap:20px;min-height:44px;font-size:12px;font-weight:700;border-bottom:1px solid #b3c4bb;color:var(--teal);margin-top:3px}
+.essay-back:hover{color:var(--ink);border-color:var(--ink)}
+.insight-contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:55px;align-items:center;padding:80px 10%;background:var(--cream)}
+.insight-contact h2{font:clamp(33px,4vw,51px)/1.1 Georgia,serif;letter-spacing:-.03em;margin-bottom:24px}
+.insight-contact p:last-child{max-width:510px;font-size:16px;line-height:1.8;margin-bottom:0}
+.insight-contact-details{display:grid;gap:16px;justify-items:start;min-width:0}
+.insight-contact-details>a:not(.button){font-size:15px;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:5px}
+.insights-page .button{transition:background-color .2s,color .2s;min-height:48px}
+.insights-page .button:hover{background:var(--teal);color:#fff}
+.insights-page footer>div{min-width:0}
+.insights-page footer>div a{overflow-wrap:anywhere}
+.founder-note a:focus-visible,.insight-library a:focus-visible,.insight-contact a:focus-visible{outline-color:#123b40}
+@media(max-width:1120px){.founder-note{grid-template-columns:1fr;gap:30px}.founder-note-copy{max-width:760px}.insight-library{gap:40px;grid-template-columns:190px minmax(0,1fr)}}
+@media(max-width:1024px){.insights-page .nav{height:72px}.insights-page .nav nav{display:none}.insights-page .nav nav.open{display:flex;position:absolute;top:72px;left:0;right:0;background:var(--ink);padding:25px;flex-direction:column;align-items:flex-start;max-height:calc(100vh - 72px);overflow:auto;font-size:14px;gap:17px}.insights-page .menu{display:block;background:transparent;border:0;color:#fff;font-size:25px}}
+@media(max-width:820px){.insights-hero{padding:132px 7% 65px}.insights-hero .intro{font-size:17px}.founder-note{padding:48px 7%}.insight-library{display:block;padding:48px 7% 20px}.insight-contents{position:static;margin-bottom:49px;padding-top:0}.insight-contents nav{grid-template-columns:1fr 1fr;column-gap:24px}.contents-note{max-width:600px;margin-top:22px}.insight-essay{margin-bottom:46px;padding-bottom:37px}.insight-contact{grid-template-columns:1fr;padding:65px 7%;gap:28px}.insight-contact-details{gap:20px}}
+@media(max-width:500px){.insights-hero h1{font-size:43px}.insights-hero{padding-bottom:57px}.founder-note-identity{gap:18px}.desk-monogram{width:76px;height:96px;font-size:33px}.founder-note h2{font-size:27px}.founder-note .eyebrow{font-size:9px;letter-spacing:.1em}.founder-note-identity p:last-child{font-size:11px}.insight-contents nav{grid-template-columns:1fr}.insight-contents nav a{padding:14px 0}.insight-essay h2{font-size:32px}.insight-essay .essay-lead{font-size:21px!important}.insight-essay p:not(.essay-kicker){font-size:16px;line-height:1.85}.insight-contact h2{font-size:35px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.insights-page .button,.insight-contents nav a{transition:none}}
