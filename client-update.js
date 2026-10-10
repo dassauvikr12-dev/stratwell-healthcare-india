@@ -137,11 +137,46 @@
     if (explore) explore.firstChild.textContent = 'Explore workshops & programmes ';
   }
   const topic = document.querySelector('#workshop-topic');
+  const selectWorkshop = requested => {
+    if (!topic || !requested) return false;
+    const chosen = Array.from(topic.options).find(option => option.value === requested);
+    if (!chosen) return false;
+    Array.from(topic.options).forEach(option => {
+      option.selected = option === chosen;
+      option.toggleAttribute('selected', option === chosen);
+    });
+    topic.value = chosen.value;
+    const form = topic.closest('form');
+    if (form) {
+      let notice = form.querySelector('[data-workshop-selection]');
+      if (!notice) {
+        notice = document.createElement('p');
+        notice.className = 'form-note'; notice.dataset.workshopSelection = '';
+        notice.setAttribute('role', 'status');
+        form.prepend(notice);
+      }
+      notice.textContent = `Topic selected: ${chosen.value}. Complete your institution details to prepare an enquiry.`;
+    }
+    topic.dispatchEvent(new Event('input', {bubbles:true}));
+    topic.dispatchEvent(new Event('change', {bubbles:true}));
+    return true;
+  };
+  if (topic) {
+    topic.addEventListener('change', () => {
+      const notice = topic.closest('form')?.querySelector('[data-workshop-selection]');
+      if (notice) notice.textContent = topic.value ? `Topic selected: ${topic.value}. Complete your institution details to prepare an enquiry.` : 'Please select your preferred workshop topic.';
+    });
+    selectWorkshop(new URLSearchParams(window.location.search).get('topic'));
+  }
   document.querySelectorAll('[data-workshop-topic]').forEach(link => {
-    link.addEventListener('click', () => {
-      if (!topic) return;
-      topic.value = link.dataset.workshopTopic;
-      topic.dispatchEvent(new Event('change', {bubbles:true}));
+    const requested = link.dataset.workshopTopic;
+    link.href = `training.html?topic=${encodeURIComponent(requested)}#institute-enquiry`;
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      if (!selectWorkshop(requested)) return;
+      event.preventDefault();
+      try { history.replaceState(null, '', link.href); } catch { /* Selection also works in an offline preview. */ }
+      document.querySelector('#institute-enquiry')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'start'});
     });
   });
   const now = new Date();
