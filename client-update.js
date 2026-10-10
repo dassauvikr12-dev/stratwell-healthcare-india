@@ -82,3 +82,69 @@
     });
   });
 })();
+
+// Shared workshop navigation and authorised developer credit on public pages.
+(() => {
+  if (!document.querySelector('link[href="learning.css"]')) {
+    const sheet = document.createElement('link');
+    sheet.rel = 'stylesheet'; sheet.href = 'learning.css';
+    document.head.append(sheet);
+  }
+  document.querySelectorAll('#main-navigation a[href="training.html"]').forEach(link => {
+    link.textContent = 'Training & workshops';
+  });
+  const footer = document.querySelector('footer');
+  if (footer && !footer.querySelector('.site-credit')) {
+    const credit = document.createElement('div'); credit.className = 'site-credit';
+    const label = document.createElement('span'); label.className = 'site-credit-label';
+    label.textContent = 'Designed & developed by';
+    const link = document.createElement('a'); link.className = 'site-credit-link';
+    link.href = 'https://bysauvik.com/'; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', 'Designed and developed by bySAUVIK. Visit bysauvik.com (opens in a new tab)');
+    const logo = document.createElement('img');
+    logo.src = 'https://bysauvik.com/assets/bysauvik-mark.svg';
+    logo.width = 30; logo.height = 30; logo.alt = ''; logo.loading = 'lazy'; logo.decoding = 'async';
+    logo.referrerPolicy = 'no-referrer';
+    // Keep the accessible wordmark visible if the external asset is unavailable.
+    logo.addEventListener('error', () => { logo.hidden = true; });
+    const wordmark = document.createElement('span'); wordmark.className = 'site-credit-wordmark';
+    const prefix = document.createElement('i'); prefix.textContent = 'by';
+    const domain = document.createElement('span'); domain.className = 'site-credit-domain'; domain.textContent = 'bysauvik.com';
+    wordmark.append(prefix, document.createTextNode('SAUVIK'), domain);
+    const arrow = document.createElement('span'); arrow.className = 'site-credit-arrow'; arrow.setAttribute('aria-hidden','true'); arrow.textContent = '↗';
+    link.append(logo, wordmark, arrow); credit.append(label, link); footer.append(credit);
+    const footerLinks = footer.querySelector('.footer-links');
+    if (footerLinks && !footerLinks.querySelector('a[href*="training.html"]')) {
+      const training = document.createElement('a'); training.href = 'training.html#institute-enquiry';
+      training.textContent = 'Training & institutional partnerships'; footerLinks.prepend(training);
+    }
+  }
+  // Enrich the existing campus introduction without duplicating the section.
+  const campus = document.querySelector('#campus');
+  if (campus) {
+    campus.querySelector('.campus-copy .eyebrow').textContent = 'Stratwell Learning & Industry Connect';
+    campus.querySelector('.campus-copy > p:not(.eyebrow)').textContent = 'Workshops, career readiness and industry exposure for universities, nursing colleges, allied-health institutes and healthcare-management students. We help your academic or placement team shape a programme around your learners.';
+    const partnership = campus.querySelector('.campus-copy .arrow-link');
+    partnership.href = 'training.html#institute-enquiry';
+    partnership.replaceChildren(document.createTextNode('Partner with us for campus training '));
+    const arrow = document.createElement('span'); arrow.textContent = '→'; arrow.setAttribute('aria-hidden','true'); partnership.append(arrow);
+    const featured = campus.querySelector('.campus-node.featured');
+    featured.querySelector('strong').textContent = 'Workshops & industry connect';
+    featured.querySelector('small').textContent = 'Career readiness · practical exposure · employer conversations';
+    campus.querySelector('.campus-workshops p:not(.eyebrow)').textContent = 'Healthcare careers, CV clinics, interview preparation, communication, hospital operations and workplace readiness. Explore on-campus, online or hybrid formats, tailored with your institution.';
+    campus.querySelector('.workshop-note small').textContent = 'Topics, trainers, delivery dates and any fees are agreed in writing before booking. Hospital exposure visits need host approval. Training does not guarantee placement or clinical certification.';
+    const explore = campus.querySelector('a.button[href="training.html"]');
+    if (explore) explore.firstChild.textContent = 'Explore workshops & programmes ';
+  }
+  const topic = document.querySelector('#workshop-topic');
+  document.querySelectorAll('[data-workshop-topic]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (!topic) return;
+      topic.value = link.dataset.workshopTopic;
+      topic.dispatchEvent(new Event('change', {bubbles:true}));
+    });
+  });
+  const now = new Date();
+  const today = new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  document.querySelectorAll('[data-future-date]').forEach(input => { input.min = today; });
+})();
