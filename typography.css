@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Stratwell's single-family brand typography.
+   The font-family-only priority guard covers independent legacy stylesheets
+   and dynamically rendered portal components without changing their layout.
+   Existing logo artwork is an image and remains untouched. */
+:root { --font-brand: 'Poppins', Arial, sans-serif; }
+:root body,
+:root body *,
+:root body *::before,
+:root body *::after {
+  font-family: var(--font-brand) !important;
+}
+:root body { font-size: 16px; line-height: 1.65; font-weight: 400; }
+:root body h1,
+:root body h2 {
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
+:root body h3,
+:root body h4,
+:root body h5,
+:root body h6 {
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.015em;
+}
+:root body .hero h1 { font-size: clamp(2.5rem, 5vw, 4.8rem); }
+:root body .page-hero h1,
+:root body .learning-copy h1 { font-size: clamp(2.5rem, 5vw, 4.6rem); }
+:root body h2 { font-size: clamp(2rem, 4vw, 3.6rem); }
+:root body .app h2,
+:root body .modal h2,
+:root body .portal-shell h2 { font-size: clamp(1.4rem, 2.5vw, 2.1rem); }
+:root body .hero h1 em,
+:root body .campus-copy h2 em { font-style: normal; font-weight: inherit; }
+:root body .statement p { font-weight: 500; line-height: 1.35; }
+:root body .founder-intro > p:first-child,
+:root body .founder-section-end > p,
+:root body .learning-visual-foot { font-weight: 500; line-height: 1.5; }
+:root body .button,
+:root body .action-btn,
+:root body .nav-cta { font-weight: 600; line-height: 1.5; }
+:root body input,
+:root body select,
+:root body textarea { font-size: 1rem; line-height: 1.5; }
+:root body .hero-copy,
+:root body .content-panel,
+:root body .section-head > *,
+:root body .founder-heading > *,
+:root body .learning-copy { min-width: 0; }
+:root body .contact-details a,
+:root body .learning-contact a:not(.button) { overflow-wrap: anywhere; }
+:root body .hero .actions { flex-wrap: wrap; }
+:root body .hero .actions .button { white-space: normal; text-align: left; }
+@media (max-width: 600px) {
+  :root body .hero h1,
+  :root body .page-hero h1,
+  :root body .learning-copy h1 { font-size: clamp(2.25rem, 9.8vw, 3.35rem); }
+  :root body h2 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  :root body .founder-insight h3 { font-size: 1.4rem; }
+  :root body .learning-programmes h3 { font-size: 1.4rem; }
+  :root body .role-grid strong { font-size: 1.1rem; line-height: 1.4; }
+}
