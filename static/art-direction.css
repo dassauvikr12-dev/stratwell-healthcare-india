@@ -1,0 +1,33 @@
+/* Hirezyy: richer founder contrast; compact cards and the single Poppins family retained. */
+.visual-site .v-founders{position:relative;isolation:isolate;background:radial-gradient(ellipse at 92% 5%,rgba(197,159,104,.12),transparent 53%),linear-gradient(120deg,#10373c 0%,#17464a 72%,#205352 100%);color:#fffaf2;border-top:1px solid #47645a;border-bottom:1px solid #47645a}
+.visual-site .v-founders .v-section-head h2{color:#fffaf2}
+.visual-site .v-founders .v-section-head .eyebrow{color:#e3bf8d}
+.visual-site .v-founders .v-section-head>p{color:#cbded4}
+.visual-site .v-founder-card{background:#fffaf2;border:1px solid #c9b487;border-top:4px solid #cfaa72;box-shadow:0 12px 30px rgba(2,21,25,.16)}
+.visual-site .v-founder-portrait{background:#244b4d}
+.visual-site .v-founder-copy{background:linear-gradient(145deg,#fffdf8,#f7efdf);color:#173e42}
+.visual-site .v-founder-copy .eyebrow{align-self:flex-start;display:inline-block;border-radius:4px;background:#ecdbbc;color:#5c4323;padding:4px 8px;line-height:1.25;font-size:8px;letter-spacing:.16em;margin-bottom:9px}
+.visual-site .v-founder-copy h3{color:#143c40}
+.visual-site .v-founder-copy>p:not(.eyebrow){color:#475f59}
+.visual-site .v-founder-actions a{border-color:#c0c9b9;background:#fffdf8;color:#173e42;transition:background-color .16s,color .16s,border-color .16s}
+.visual-site .v-founder-actions a[href^="tel:"]{background:#16464b;color:#fffdf8;border-color:#16464b}
+.visual-site .v-founder-actions a[href*="wa.me"]{background:#206449;color:#fffdf8;border-color:#206449}
+.visual-site .v-founder-actions a[href^="mailto:"]{background:#e0ece4;border-color:#becfc1;color:#193e38}
+.visual-site .v-founder-actions a[href*="calendar.google.com"]{background:#eaddc7;color:#4a3821;border-color:#c9ad7e}
+.visual-site .v-founder-actions a:hover,.visual-site .v-founder-actions a:focus-visible{background:#0d343a;color:#fffdf8;border-color:#0d343a}
+.visual-site .v-founder-copy>.arrow-link{color:#173e42;border-color:#a78047}
+.visual-site .v-founder-copy>.arrow-link:hover{color:#715124;border-color:#715124}
+.visual-site .v-founder-foot p{color:#d1ded6}
+.visual-site .v-founder-foot .arrow-link{color:#f0cf9a;border-color:#b79566}
+.visual-site .v-founder-foot .arrow-link:hover{color:#fffaf2;border-color:#fffaf2}
+.visual-site .v-founders a:focus-visible,.visual-site .v-founders summary:focus-visible{outline:3px solid #c18a38;outline-offset:4px}
+.visual-site .v-biography summary{color:#173e42;border-color:#b89a6e}
+.visual-site .v-biography p{color:#475f59}
+/* Keep healthcare human and welcoming, without surgical scenes. */
+.visual-site .v-mosaic-hospital img{object-position:50% 24%;filter:saturate(.8)}
+.visual-site .v-mosaic-hospital{border:1px solid rgba(244,215,177,.24)}
+.visual-site img[src$="visual-reception.jpg"]{object-position:50% 58%}
+.visual-site .v-mosaic-label{background:#f0dfbf;border-color:#174349;color:#153d40;box-shadow:0 5px 18px rgba(6,30,30,.16)}
+.visual-site .v-home-copy .v-actions{margin-bottom:10px}
+@media(max-width:600px){.visual-site .v-founder-copy .eyebrow{font-size:8px;padding:3px 7px}.visual-site .v-founder-card{box-shadow:0 8px 20px rgba(2,21,25,.12)}.visual-site .v-founder-foot p{line-height:1.6}}
+@media(prefers-reduced-motion:reduce){.visual-site .v-founder-actions a{transition:none}}
