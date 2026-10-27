@@ -1,25 +1,15 @@
-# Hirezyy: Phase 1 brand and founder release
+# Hirezyy hospital and hotel release
 
-Approved inputs: user supplied 27 October 2026. The public brand is Hirezyy, a unit of High Value Edge. Preserve Poppins and the linked bySAUVIK developer credit. Dipta remains the enquiry contact: diptabiswas00@gmail.com / +91 70657 81441.
+The latest approved positioning is hospital and hotel recruitment, not a broad cross-industry agency. Keep Hirezyy, A unit of High Value Edge, Poppins, the existing visual palette and bySAUVIK credit.
 
-## Build and hosting
+## Current publishing path
 
-Run `node build.mjs`. Vercel publishes `dist/`, not the repository root. The existing HTML/CSS/JS files remain source templates; build.mjs applies the approved rebrand and founder content to all generated pages. Never deploy the old source templates without running the build. No npm packages, server, credentials or new hosting migration are required. Keep the existing GitHub repository and Vercel project so earlier website links remain valid. A new brand name does not register or connect a new domain.
+Run `node publish.mjs`. It publishes static/ into dist/, checks all internal links and images, and downloads the two known portrait exports with exact SHA-256 and byte-length verification. Vercel serves the resulting portrait files locally; visitors do not depend on the upload service. A build fails rather than publishing an altered or truncated portrait. To remove the external build dependency, save byte-identical portraits in assets/binoy-paul-enhanced.webp and assets/dipta-biswas.webp; the publisher prefers verified local copies. Legacy root templates and build.mjs are retained for history but are not the publishing path.
 
-The build fails on missing source sections, missing links, duplicate IDs, missing founder information or an incomplete rebrand. `dist/release.json` identifies the generated release.
+## Content and contact
 
-## Founder content
+Both founder portraits use the earlier conversation's enhanced exports at 900 x 1125. Binoy Paul: +91 95993 32936, with Call and WhatsApp; email has not been supplied. Dipta Biswas: diptabiswas00@gmail.com and +91 70657 81441. Founder organisations are professional history, not client partnerships. No new ISB/IIM qualifications or association logos have been invented. The 2013/2014 story refers to founder observations and experience, not an assertion that Hirezyy was incorporated then.
 
-Binoy Paul is added as Founder alongside Dipta Biswas. His complete supplied professional background appears on the leadership page, including IHM Guwahati, MBA in Event Management, hospitality experience in India and the UK, and over a decade at Delhivery Ltd. Organisation and location names are retained as supplied; none are represented as Hirezyy clients or partners. No testimonials, client logos, placement outcomes or founder quotations were invented.
+Google Calendar actions open personal event drafts only. Confirm the time directly before saving. No live founder availability, booking API or appointment schedule is connected. No invitations or messages are sent by publishing or testing this site.
 
-The founder photograph is an optimised copy of the user-supplied image, published as assets/binoy-paul.avif. It is not an AI-generated portrait. The photo appears on the homepage, leadership page and Founders’ Desk. Dipta’s existing profile and initials artwork remain; no replacement portrait is invented.
-
-## Phase 1 and Phase 2
-
-The public homepage focuses on recruitment, institutional workshops, founder information and enquiries. Illustrative vacancies and public demo login/portal entry points are removed from the published homepage. Their legacy source files are retained in the repository but not deployed. Authenticated client/candidate/recruiter portals and automation remain Phase 2, subject to increased requirements and separate implementation.
-
-Existing forms prepare email or WhatsApp drafts. They do not submit automatically or store enquiries in a database. This release does not send outreach emails.
-
-## Inputs still pending
-
-Approved hospital names/relationships from Dipta; approved college/institution names/relationships from Binoy; a final Hirezyy domain and DNS configuration. Do not present founder employers as client partnerships.
+Forms prepare visitor-reviewed email/WhatsApp drafts. They do not upload CVs, store enquiries, or send automatically. Live client, candidate and recruiter portals remain Phase 2. Hospital and college partner names/logos and a final Hirezyy domain are still pending approval.

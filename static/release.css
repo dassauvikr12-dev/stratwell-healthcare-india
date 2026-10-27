@@ -1,0 +1,15 @@
+/* Portrait fidelity, honest calendar actions and accessible responsive refinements. */
+.hirezyy-founder-photo{aspect-ratio:4/5}
+.hirezyy-founder-photo img{display:block;max-width:100%;width:100%;height:100%;object-fit:cover;object-position:center 24%}
+.calendar-note{font-size:12px!important;line-height:1.7!important;color:#52665f!important;margin:0 0 20px!important;max-width:44rem}
+.founder-actions{align-items:center}
+.founder-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;line-height:1.5}
+.founder-insights-link{margin-top:32px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #c77d38;outline-offset:4px}
+.site-header nav{max-height:calc(100dvh - 72px);overflow-y:auto}
+.contact-details a,.site-footer a{overflow-wrap:anywhere}
+.enquiry-form>*,.form-actions>*{min-width:0}
+.enquiry-result[hidden]{display:none!important}
+.result-status,.form-note{overflow-wrap:anywhere}
+@media(max-width:600px){.hirezyy-founder-copy{padding:24px}.calendar-note{font-size:11px!important}.founder-actions{gap:8px}.founder-actions a{flex:1 1 auto}.hero .actions{flex-wrap:wrap}.site-header{gap:14px}.hero-copy .trust{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
