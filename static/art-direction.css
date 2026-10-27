@@ -31,3 +31,7 @@
 .visual-site .v-home-copy .v-actions{margin-bottom:10px}
 @media(max-width:600px){.visual-site .v-founder-copy .eyebrow{font-size:8px;padding:3px 7px}.visual-site .v-founder-card{box-shadow:0 8px 20px rgba(2,21,25,.12)}.visual-site .v-founder-foot p{line-height:1.6}}
 @media(prefers-reduced-motion:reduce){.visual-site .v-founder-actions a{transition:none}}
+
+/* Preserve corridor context and staff within the narrow homepage panel. */
+.visual-site .v-mosaic-hospital img[src$="visual-corridor.jpg"]{object-position:50% 61%;filter:brightness(1.27) contrast(.95) saturate(.9)}
+.visual-site .v-mosaic-hospital:has(img[src$="visual-corridor.jpg"])::after{background:linear-gradient(180deg,transparent 52%,rgba(8,38,42,.76) 100%)}
