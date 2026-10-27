@@ -1,0 +1,108 @@
+/* Founder summaries never expand: biographies live on their own accessible pages. */
+.visual-site .v-founder-grid{align-items:stretch}
+.visual-site .v-founder-card{grid-template-columns:35% minmax(0,1fr);height:auto;min-height:306px;align-items:stretch;background:linear-gradient(145deg,#fffdf8,#f7efdf)}
+.visual-site .v-founder-portrait{min-height:0;height:auto;max-height:340px;align-self:stretch}
+.visual-site .v-founder-portrait img{object-fit:cover;object-position:50% 18%}
+.visual-site .v-founder-copy{padding:22px 20px}
+.visual-site .v-founder-identity{min-width:0}
+.visual-site .v-founder-identity h3{font-size:26px;line-height:1.22;margin:0 0 12px}
+.visual-site .v-founder-identity>p:not(.eyebrow){font-size:12px;line-height:1.65;min-height:40px;margin:0 0 18px;color:#475f59}
+.visual-site .v-founder-actions a{min-height:44px;font-size:11px;padding:9px 10px}
+.visual-site .v-profile-link{min-height:44px;display:inline-flex;align-items:center;gap:12px;line-height:1.4;font-size:12px;margin-top:auto}
+.visual-site .v-founder-foot p{max-width:680px;font-size:11px;line-height:1.6}
+/* Biographies cannot change the dimensions of the independent portrait above them. */
+.fp-hero{padding:122px 0 48px;background:radial-gradient(ellipse at 92% 5%,rgba(197,159,104,.12),transparent 53%),linear-gradient(120deg,#10373c,#205352);color:#fffaf2}
+.fp-back{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:13px;color:#f0cf9a;margin-bottom:23px;text-decoration:none}
+.fp-back:hover{text-decoration:underline;text-underline-offset:5px}
+.fp-intro{display:grid;grid-template-columns:minmax(220px,310px) minmax(0,1fr);gap:56px;align-items:center;max-width:1080px}
+.fp-portrait{width:100%;aspect-ratio:4/5;overflow:hidden;border:1px solid #c9b487;border-top:4px solid #cfaa72;border-radius:16px;background:#244b4d}
+.fp-portrait img{position:static;display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.fp-identity{min-width:0}
+.fp-identity>.eyebrow{color:#e3bf8d;margin-bottom:18px}
+.fp-identity h1{font-size:clamp(32px,4.6vw,60px);line-height:1.12;letter-spacing:-.035em;margin:0 0 20px;color:#fffaf2}
+.fp-strap{font-size:clamp(16px,1.7vw,21px);line-height:1.6;color:#d6e6de;max-width:580px;margin-bottom:16px}
+.fp-affiliation{font-size:12px;color:#e3bf8d;margin-bottom:25px}
+.fp-identity .v-founder-actions{display:flex;flex-wrap:wrap;gap:10px;max-width:620px;margin:0 0 15px}
+.fp-identity .v-founder-actions a{flex:0 1 auto;min-width:100px;padding:12px 18px;font-size:12px;border-radius:30px;text-decoration:none}
+.fp-identity .v-founder-actions a[href^="tel:"]{background:#fffaf2;color:#143c40;border-color:#fffaf2}
+.fp-identity .v-founder-actions a[href*="wa.me"]{background:#267653;border-color:#7aab90}
+.fp-identity .v-founder-actions a[href*="calendar.google.com"]{min-width:155px}
+.fp-calendar-note{font-size:11px;line-height:1.7;max-width:530px;color:#d1ded6;margin:0}
+.fp-biography{padding:64px 0;background:#fffdf8}
+.fp-reading-grid{display:grid;grid-template-columns:minmax(200px,310px) minmax(0,1fr);gap:56px;align-items:start;max-width:1080px}
+.fp-reading-grid aside h2{font-size:clamp(26px,3vw,37px);line-height:1.2;margin-bottom:24px}
+.fp-reading-grid aside>.eyebrow{font-size:10px;line-height:1.8}
+.fp-contact{display:flex;flex-direction:column;gap:7px;font-size:13px;overflow-wrap:anywhere}
+.fp-contact a{min-height:36px;display:flex;align-items:center;text-underline-offset:4px}
+.fp-reading{max-width:70ch;min-width:0}
+.fp-reading p{font-size:16px;line-height:1.9;color:#475f59;margin:0 0 22px}
+.fp-reading .hirezyy-background-note{border-left:3px solid #b79566;padding:15px 19px;background:#f4edde;font-size:12px;line-height:1.8;margin-bottom:0}
+.fp-next{padding:40px 0;background:#e8eee6;border-top:1px solid #cfdbcf}
+.fp-next>.v-wrap{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.fp-next h2{font-size:30px;margin:0 0 10px}
+.fp-next p:not(.eyebrow){font-size:14px;margin:0;color:#475f59}
+.fp-next .button{flex-shrink:0;min-height:48px}
+.fp-back:focus-visible,.fp-contact a:focus-visible{outline:3px solid #c18a38;outline-offset:4px}
+@media(min-width:1000px) and (max-width:1199px){
+ .visual-site .v-founder-card{grid-template-columns:31% minmax(0,1fr);min-height:320px}
+ .visual-site .v-founder-copy{padding:22px 16px}
+ .visual-site .v-founder-identity h3{font-size:23px}
+ .visual-site .v-founder-actions{gap:6px}
+ .visual-site .v-founder-actions a{padding:8px 6px;font-size:10px}
+}
+@media(min-width:601px) and (max-width:999px){
+ .visual-site .v-founder-grid{grid-template-columns:1fr;max-width:720px;margin-inline:auto;gap:20px}
+ .visual-site .v-founder-card{display:grid;grid-template-columns:190px minmax(0,1fr);min-height:278px}
+ .visual-site .v-founder-portrait{height:auto;min-height:0;max-height:310px}
+ .visual-site .v-founder-copy{padding:22px 25px}
+ .visual-site .v-founder-identity h3{font-size:26px}
+ .visual-site .v-founder-identity>p:not(.eyebrow){min-height:0;margin-bottom:15px}
+ .visual-site .v-founder-foot{flex-wrap:wrap}
+ .fp-intro,.fp-reading-grid{grid-template-columns:240px minmax(0,1fr);gap:30px}
+ .fp-identity .v-founder-actions a{min-width:85px;padding:10px 13px}
+ .fp-identity .v-founder-actions a[href*="calendar.google.com"]{min-width:155px}
+ .fp-next h2{font-size:26px}
+}
+@media(max-width:600px){
+ .visual-site .v-founder-card{display:grid;grid-template-columns:108px minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:16px;row-gap:14px;padding:17px;min-height:0;height:auto;overflow:hidden}
+ .visual-site .v-founder-portrait{position:relative;grid-column:1;grid-row:1;width:108px;height:135px;min-height:0;max-height:none;aspect-ratio:4/5;border-radius:9px;align-self:start}
+ .visual-site .v-founder-portrait img{position:static;width:100%;height:100%;object-fit:cover;object-position:center top}
+ .visual-site .v-founder-copy{display:contents;padding:0;background:none}
+ .visual-site .v-founder-identity{grid-column:2;grid-row:1;align-self:center}
+ .visual-site .v-founder-identity h3{font-size:23px;line-height:1.2;margin-bottom:10px}
+ .visual-site .v-founder-identity>.eyebrow{display:inline-block;margin:0 0 10px}
+ .visual-site .v-founder-identity>p:not(.eyebrow){font-size:11px;line-height:1.65;min-height:0;margin:0}
+ .visual-site .v-founder-card .v-founder-actions{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:7px}
+ .visual-site .v-founder-card:first-child .v-founder-actions a:nth-child(2){grid-column:2/4}
+ .visual-site .v-founder-card .v-founder-actions a[href^="mailto:"]{grid-column:auto}
+ .visual-site .v-founder-card .v-founder-actions a[href*="calendar.google.com"]{grid-column:1/-1}
+ .visual-site .v-founder-card .v-founder-actions a{font-size:11px;min-height:44px;min-width:0}
+ .visual-site .v-profile-link{grid-column:1/-1;grid-row:3;margin:0;justify-self:start;min-height:40px}
+ .fp-hero{padding:100px 0 38px}
+ .fp-back{margin-bottom:20px}
+ .fp-intro{grid-template-columns:1fr;gap:27px}
+ .fp-portrait{max-width:250px;justify-self:center}
+ .fp-identity{text-align:left}
+ .fp-identity h1{font-size:36px;margin-bottom:15px}
+ .fp-identity>.eyebrow{margin-bottom:12px}
+ .fp-strap{font-size:17px}
+ .fp-affiliation{margin-bottom:22px}
+ .fp-identity .v-founder-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .fp-identity .v-founder-actions a{min-width:0;padding:12px 10px;font-size:12px}
+ .fp-identity .v-founder-actions a[href*="calendar.google.com"]{min-width:0;grid-column:1/-1}
+ .fp-calendar-note{font-size:11px}
+ .fp-biography{padding:40px 0}
+ .fp-reading-grid{grid-template-columns:1fr;gap:26px}
+ .fp-reading-grid aside h2{font-size:28px;margin-bottom:15px}
+ .fp-reading p{font-size:15px;line-height:1.85}
+ .fp-next{padding:34px 0}
+ .fp-next>.v-wrap{flex-direction:column;align-items:flex-start;gap:22px}
+ .fp-next h2{font-size:27px}
+}
+@media(max-width:359px){
+ .visual-site .v-founder-card{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
+ .visual-site .v-founder-portrait{width:84px;height:105px}
+ .visual-site .v-founder-identity h3{font-size:21px}
+ .visual-site .v-founder-identity>p:not(.eyebrow){font-size:10px}
+ .visual-site .v-founder-actions a{padding:9px 6px}
+}
