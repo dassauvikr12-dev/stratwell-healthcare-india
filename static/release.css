@@ -12,4 +12,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .enquiry-result[hidden]{display:none!important}
 .result-status,.form-note{overflow-wrap:anywhere}
 @media(max-width:600px){.hirezyy-founder-copy{padding:24px}.calendar-note{font-size:11px!important}.founder-actions{gap:8px}.founder-actions a{flex:1 1 auto}.hero .actions{flex-wrap:wrap}.site-header{gap:14px}.hero-copy .trust{flex-wrap:wrap}}
+/* Fixed row spacing avoids percentage gaps growing with the long mobile form. */
+@media(max-width:850px){.visual-site .v-application-grid{row-gap:28px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}

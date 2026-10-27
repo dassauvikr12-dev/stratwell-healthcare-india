@@ -2,7 +2,7 @@ import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
 import {join} from 'node:path';
 
 // Run after publish.mjs. Keep the verified founder portraits and existing enquiry flows.
-const out=join(process.cwd(),'dist');
+const out=join(globalThis.process.cwd(),'dist');
 const old={};
 for(const name of ['index','about','employers','candidates','training','careers','insights','faq'])old[name]=await readFile(join(out,name+'.html'),'utf8');
 const assets={
