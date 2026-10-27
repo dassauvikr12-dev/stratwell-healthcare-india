@@ -1,0 +1,183 @@
+/* Hirezyy professional identity. One palette, not a different colour per audience.
+   Loaded last. Existing responsive layouts and candidate behaviours are preserved. */
+.visual-site {
+  --brand-navy:#142338; --brand-deep:#0f1c2d; --brand-slate:#23364e;
+  --brand-accent:#375f87; --brand-ice:#c0d4e8;
+  --brand-canvas:#e8edf3; --brand-panel:#dfe6ef; --brand-panel-light:#f1f4f8;
+  --brand-line:#b9c7d7; --brand-muted:#475a70; --brand-light:#f5f8fc;
+  --v-ink:var(--brand-navy); --v-paper:var(--brand-canvas);
+  --v-mint:var(--brand-ice); --v-line:var(--brand-line);
+  --ink:var(--brand-navy); --deep:var(--brand-deep); --teal:var(--brand-accent);
+  --cream:var(--brand-canvas); --paper:var(--brand-panel-light);
+  --coral:var(--brand-accent); --sand:var(--brand-panel);
+  --muted:var(--brand-muted); --line:var(--brand-line);
+  background:var(--brand-canvas); color:var(--brand-navy);
+}
+/* Clear light/dark hierarchy with solid surfaces and no gold/pastel gradients. */
+.visual-site .site-header,
+.visual-site .site-header nav.open,
+.visual-site .v-home-hero,
+.visual-site .v-page-hero,
+.visual-site .v-end,
+.visual-site .fp-hero {
+  background:var(--brand-navy); color:var(--brand-light);
+}
+.visual-site .site-header{border-bottom:1px solid #ffffff12}
+.visual-site .site-header .brand-mark{border-color:#91a8c0}
+.visual-site .site-header .brand small{color:#c3d0df}
+.visual-site .site-header nav a:hover{color:#c0d4e8}
+.visual-site .nav-cta{border-color:#859ab2}
+.visual-site .v-section{background:var(--brand-canvas)}
+.visual-site .v-choose,
+.visual-site .v-process,
+.visual-site .v-campus,
+.visual-site .v-form-section,
+.visual-site .v-application,
+.visual-site .fp-next {background:#dde5ef;border-color:var(--brand-line)}
+.visual-site .v-founders {
+  background:var(--brand-slate);color:var(--brand-light);
+  border-color:#39506b;
+}
+.visual-site .v-end{background:var(--brand-navy)}
+.visual-site .site-footer{background:var(--brand-deep);color:#d3deeb;border-color:#34465e}
+.visual-site .site-footer h3,.visual-site .site-footer .brand{color:var(--brand-light)}
+.visual-site .site-credit{border-color:#34465e;color:#b8c8da}
+.visual-site .site-footer .copyright{color:#b8c8da}
+.visual-site .v-section-head>p,
+.visual-site .v-small,
+.visual-site .v-steps p,
+.visual-site .v-campus p:not(.eyebrow),
+.visual-site .v-timeline p,
+.visual-site .v-topic-grid p,
+.visual-site .v-insight-grid p,
+.visual-site .v-format-strip p,
+.visual-site .v-application aside>p:not(.eyebrow),
+.visual-site .v-stage-options small,
+.visual-site .v-file-zone label span,
+.visual-site details p,
+.visual-site .fp-reading p,
+.visual-site .fp-next p:not(.eyebrow){color:var(--brand-muted)}
+.visual-site .eyebrow.teal,.visual-site .v-number,
+.visual-site .v-choose .eyebrow,.visual-site .v-timeline span,
+.visual-site .v-levels article>span{color:var(--brand-accent)}
+.visual-site .v-home-copy em{color:var(--brand-ice)}
+.visual-site .v-home-copy .v-lead,
+.visual-site .v-page-hero .v-lead,
+.visual-site .v-end p:not(.eyebrow),
+.visual-site .v-direct,.visual-site .v-scroll,
+.visual-site .fp-strap{color:#cbd7e6}
+.visual-site .v-home-hero .eyebrow,
+.visual-site .v-page-hero .eyebrow,
+.visual-site .v-end .eyebrow,
+.visual-site .fp-identity>.eyebrow,
+.visual-site .fp-affiliation{color:#b9cee3}
+.visual-site .v-founder-foot p,.visual-site .fp-calendar-note{color:#c4d2e2}
+.visual-site .v-founders .v-section-head h2{color:var(--brand-light)}
+.visual-site .v-founders .v-section-head>.eyebrow,
+.visual-site .v-founders .v-section-head .eyebrow{color:#b5cce5}
+.visual-site .v-founders .v-section-head>p{color:#c4d2e2}
+/* Repeated card styles now use the same neutral background. */
+.visual-site .v-choose .v-audience-card,
+.visual-site .v-sector-card,
+.visual-site .v-timeline article,
+.visual-site .v-topic-grid article,
+.visual-site .v-insight-grid article {
+  background:var(--brand-panel);border:1px solid var(--brand-line);
+  box-shadow:0 5px 15px #14233808; border-radius:12px;
+}
+.visual-site .v-choose .v-audience-card>div,
+.visual-site .v-choose .v-audience-card:nth-child(n)>div {
+  background:var(--brand-panel);color:var(--brand-navy);border-color:var(--brand-line);
+}
+.visual-site .v-choose .v-audience-card>img{border-color:var(--brand-line)}
+.visual-site .v-choose .v-audience-card h3,
+.visual-site .v-choose .v-audience-card .arrow-link{color:var(--brand-navy)}
+.visual-site .v-choose .v-audience-card p{color:var(--brand-muted)}
+.visual-site .v-choose .v-number{color:var(--brand-accent)}
+.visual-site .v-choose .v-audience-card .arrow-link{border-color:#6c829b}
+.visual-site .v-audience-card:hover{border-color:var(--brand-accent);box-shadow:0 8px 22px #14233812}
+.visual-site .v-chips span{background:#d5e0ed;border-color:#b4c4d8;color:#233e5d}
+.visual-site details,.visual-site .v-steps li,.visual-site .v-levels article{border-color:var(--brand-line)}
+.visual-site .v-step-symbol{color:var(--brand-accent)}
+/* Consistent calls to action. Colour is no longer a separate label for each card. */
+.visual-site .button,.visual-site .nav-cta{border-radius:8px}
+.visual-site .button.dark{background:var(--brand-navy);color:var(--brand-light);border-color:var(--brand-navy)}
+.visual-site .button.light{background:#dce7f3;color:var(--brand-navy);border-color:#dce7f3}
+.visual-site .button.outline{background:transparent;border-color:#6a819c;color:var(--brand-navy)}
+.visual-site .button.v-ghost{background:transparent;border-color:#849cb7;color:var(--brand-light)}
+.visual-site .button:hover{filter:none;box-shadow:0 4px 14px #0f1c2d1a}
+.visual-site .button.dark:hover{background:#29445f}
+.visual-site .button.light:hover{background:#c6d8ec}
+.visual-site .button.v-ghost:hover{background:#233952}
+.visual-site .arrow-link{color:var(--brand-navy);border-color:#7e91a9}
+.visual-site .v-text-button{color:#285682}
+.visual-site :is(a,button,input,select,textarea,summary):focus-visible {
+  outline:3px solid #4d7fad;outline-offset:4px;
+}
+.visual-site .v-founders a:focus-visible,
+.visual-site .v-founders summary:focus-visible {outline-color:#83a5cb}
+/* Founder layouts remain non-expanding, with the same verified portraits. */
+.visual-site .v-founder-card {
+  background:var(--brand-panel);border:1px solid #8196b0;border-top:3px solid #8da9ca;
+  box-shadow:0 8px 22px #08132120;
+}
+.visual-site .v-founder-copy{background:var(--brand-panel);color:var(--brand-navy)}
+.visual-site .v-founder-portrait{background:#314661}
+.visual-site .v-founder-identity h3,.visual-site .v-founder-copy h3{color:var(--brand-navy)}
+.visual-site .v-founder-identity>p:not(.eyebrow){color:var(--brand-muted)}
+.visual-site .v-founder-copy .eyebrow{background:#c8d7e8;color:#254568;border-radius:3px}
+.visual-site .v-founder-actions a,
+.visual-site .v-founder-actions a[href^="tel:"],
+.visual-site .v-founder-actions a[href*="wa.me"] {
+  background:var(--brand-navy);border-color:var(--brand-navy);color:var(--brand-light);border-radius:7px;
+}
+.visual-site .v-founder-actions a[href^="mailto:"],
+.visual-site .v-founder-actions a[href*="calendar.google.com"] {
+  background:#ccd9e9;border-color:#9db2ca;color:#183552;
+}
+.visual-site .v-founder-actions a:hover,
+.visual-site .v-founder-actions a:focus-visible{background:#2c4867;border-color:#2c4867;color:var(--brand-light)}
+.visual-site .v-founder-copy>.arrow-link{color:var(--brand-navy);border-color:#7e91a9}
+.visual-site .v-founder-foot .arrow-link,.visual-site .fp-back{color:#ccdef2;border-color:#8da7c5}
+.visual-site .fp-portrait{background:#314661;border:1px solid #8196b0;border-top:3px solid #8da9ca}
+.visual-site .fp-identity .v-founder-actions a[href^="tel:"],
+.visual-site .fp-identity .v-founder-actions a[href*="wa.me"]{background:#294463;border-color:#7190b2}
+.visual-site .fp-biography{background:var(--brand-canvas)}
+.visual-site .fp-reading .hirezyy-background-note{background:#d9e3ef;border-color:#6d8cad;color:#344b66}
+/* Application surfaces remain distinct and usable, without stark white panels. */
+.visual-site .v-form-section .enquiry-form,
+.visual-site .v-candidate-form{background:var(--brand-panel);border-color:var(--brand-line)}
+.visual-site .v-form-grid input,.visual-site .v-form-grid select,.visual-site .v-form-grid textarea,
+.visual-site .enquiry-form input,.visual-site .enquiry-form select,.visual-site .enquiry-form textarea,
+.visual-site .v-result textarea {
+  background:var(--brand-panel-light);border-color:#9dafc6;color:var(--brand-navy);
+}
+.visual-site input::placeholder,.visual-site textarea::placeholder{color:#57697d;opacity:1}
+.visual-site .v-stage-options label{background:#e8eef6;border-color:#a9bcd1}
+.visual-site .v-stage-options label:has(input:checked){background:#ccddef;border-color:#375f87;box-shadow:inset 0 0 0 1px #375f87}
+.visual-site .v-stage-options input,.visual-site .v-consent input{accent-color:#375f87}
+.visual-site .v-form-path li:before{border-color:#8ba3bf}
+.visual-site .v-file-zone{background:#eaf0f7;border-color:#7b96b6}
+.visual-site .v-file-symbol{border-color:#92a9c3;color:#375f87}
+.visual-site .v-file-zone input::file-selector-button{background:#d0deef;color:#183552;border-color:#93abc7;border-radius:7px}
+.visual-site .v-result,.visual-site .enquiry-result{background:#d4e1f0;border-color:#95aecb;color:var(--brand-navy)}
+.visual-site .v-error{color:#922d32!important}
+/* Photo overlays keep captions readable, without recolouring the photographs. */
+.visual-site .v-mosaic-label{background:#dce7f3;color:var(--brand-navy);border-color:var(--brand-navy);box-shadow:none}
+.visual-site .v-mosaic-hospital{border-color:#526982}
+.visual-site .v-hero-mosaic figure:after,
+.visual-site .v-mosaic-hospital:has(img[src$="visual-corridor.jpg"])::after {background:linear-gradient(180deg,transparent 45%,#101f34e6 100%)}
+.visual-site .v-editorial-image figcaption,
+.visual-site .v-page-image figcaption,
+.visual-site .v-career-tiles article>div{background:linear-gradient(transparent,#101f34ee);color:var(--brand-light)}
+.visual-site .v-career-tiles .v-chips span{background:#1c324dde;border-color:#8ca5c3;color:var(--brand-light)}
+.visual-site img[src$="visual-professionals.jpg"]{object-position:50% 43%}
+.visual-site img[src$="visual-workshop.jpg"]{object-position:50% 48%}
+@media(max-width:600px){
+  .visual-site .v-founder-copy{background:none}
+  /* Both people stay visible rather than being lost in the former narrow strip. */
+  .visual-site .v-choose .v-audience-card{display:flex;flex-direction:column}
+  .visual-site .v-choose .v-audience-card>img{width:100%;height:auto;min-height:0;aspect-ratio:16/9;object-position:50% 42%}
+  .visual-site .v-choose .v-audience-card>div{flex:1;border-top:1px solid var(--brand-line);border-left:0}
+}
+@media(prefers-reduced-motion:reduce){.visual-site .button,.visual-site .v-audience-card{transition:none;transform:none}}
