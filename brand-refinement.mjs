@@ -68,6 +68,19 @@ for (const name of await readdir(out)) {
   html = html.replace(/<meta name="theme-color" content="[^"]*">/, '<meta name="theme-color" content="#142338">');
   if (html.includes('visual-campus.jpg')) throw new Error('Old classroom photograph remains in ' + name);
   if ([...html.matchAll(/<form\b[\s\S]*?<\/form>/g)].map(m => m[0]).join('') !== beforeForms) throw new Error('Application form changed unexpectedly');
+  // Keep image-source records, but use the public footer for visitor journeys.
+  const footer = html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
+  const creditLink = '<a href="image-credits.html">Photography &amp; credits</a>';
+  const rawCreditLink = '<a href="image-credits.html">Photography & credits</a>';
+  if (!footer || (!footer.includes(creditLink) && !footer.includes(rawCreditLink))) {
+    throw new Error('Review shared footer before changing navigation: ' + name);
+  }
+  const updatedFooter = footer.replace(creditLink, '<a href="index.html#contact">Contact</a>')
+    .replace(rawCreditLink, '<a href="index.html#contact">Contact</a>');
+  if (updatedFooter.includes('image-credits.html') || !updatedFooter.includes('https://bysauvik.com/')) {
+    throw new Error('Footer navigation or developer credit changed unexpectedly: ' + name);
+  }
+  html = html.replace(footer, updatedFooter);
   pages.set(name, html);
   await writeFile(join(out, name), html);
 }
@@ -90,7 +103,8 @@ for (const [name, html] of pages) {
 }
 const release = JSON.parse(await readFile(join(out, 'release.json'), 'utf8'));
 Object.assign(release, {
-  release: '2026-10-28-professional-brand-system',
+  release: '2026-10-28-footer-navigation',
+  footerNavigation: ['Career paths', 'Questions & answers', 'Candidate privacy', 'Contact'],
   palette: 'Navy, slate and cool grey; restrained steel-blue accents',
   founderPalette: 'Navy background, cool-grey cards and coordinated blue actions',
   candidateImagery: 'Adult professional collaboration; classroom image removed across public pages',
